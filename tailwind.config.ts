@@ -1,44 +1,18 @@
-﻿import type { Config } from "tailwindcss";
-
+import type { Config } from "tailwindcss";
 const config: Config = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./app/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
-      fontFamily: {
-        sans:    ["var(--font-body)", "sans-serif"],
-        display: ["var(--font-display)", "sans-serif"],
-        mono:    ["var(--font-mono)", "monospace"],
-      },
+      fontFamily: { sans: ["Inter","sans-serif"], mono: ["JetBrains Mono","monospace"] },
       colors: {
-        bg:      "#080808",
-        surface: "#111111",
-        card:    "#141414",
-        border:  "#222222",
-        soft:    "#f0ede8",
-        cream:   "#e8e4de",
-        muted:   "#555555",
-        faint:   "#2a2a2a",
-      },
-      borderRadius: {
-        pill: "9999px",
+        ink: "#111111", muted: "#6b7280", faint: "#f9fafb",
+        border: "#e5e7eb", "border-strong": "#d1d5db",
       },
       animation: {
-        "slide-up": "slide-up 0.6s cubic-bezier(0.16,1,0.3,1) forwards",
-        "fade-in":  "fade-in 0.5s ease forwards",
+        "slide-up": "slide-up 0.7s cubic-bezier(0.16,1,0.3,1) forwards",
       },
       keyframes: {
-        "slide-up": {
-          from: { opacity: "0", transform: "translateY(24px)" },
-          to:   { opacity: "1", transform: "translateY(0)" },
-        },
-        "fade-in": {
-          from: { opacity: "0" },
-          to:   { opacity: "1" },
-        },
+        "slide-up": { from:{ opacity:"0", transform:"translateY(24px)" }, to:{ opacity:"1", transform:"translateY(0)" } },
       },
     },
   },
