@@ -1,4 +1,4 @@
-// ─── Types ────────────────────────────────────────────────────────────────────
+﻿// â”€â”€â”€ Types â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export interface Project {
   id: string;
   title: string;
@@ -71,12 +71,12 @@ export interface PortfolioData {
   messages: Message[];
 }
 
-// ─── Default Data ─────────────────────────────────────────────────────────────
+// â”€â”€â”€ Default Data â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export const DEFAULT_DATA: PortfolioData = {
   personal: {
     name: "Mohamed Nasser Gamal",
     title: "Full Stack Software Engineer",
-    subtitle: "React · Node.js · Bioinformatics",
+    subtitle: "React Â· Node.js Â· Bioinformatics",
     location: "Cairo, Egypt",
     email: "monaserrrrrr@gmail.com",
     phone: "+20 106 196 4236",
@@ -107,7 +107,7 @@ export const DEFAULT_DATA: PortfolioData = {
       id: "rfouf",
       title: "Rfouf",
       subtitle: "Full Stack E-Commerce Platform",
-      year: "2025 – Present",
+      year: "2025 â€“ Present",
       status: "live",
       description: "Production-ready Arabic e-commerce platform for books and products.",
       tech: ["React", "Node.js", "Express", "MongoDB", "Firebase", "Railway"],
@@ -129,7 +129,7 @@ export const DEFAULT_DATA: PortfolioData = {
       id: "freelance",
       title: "Client Projects",
       subtitle: "SDESIGNS Studio, Mariam Hany",
-      year: "2024 – 2025",
+      year: "2024 â€“ 2025",
       status: "live",
       description: "Responsive, SEO-optimized websites for real clients with 95+ Lighthouse score.",
       tech: ["React", "HTML5", "CSS3", "JavaScript", "SEO"],
@@ -162,7 +162,7 @@ export const DEFAULT_DATA: PortfolioData = {
       id: "fullstackopen",
       title: "Full Stack Open",
       subtitle: "University of Helsinki",
-      year: "2025 – Present",
+      year: "2025 â€“ Present",
       status: "wip",
       description: "Structured full-stack training from University of Helsinki.",
       tech: ["React", "Node.js", "Express", "MongoDB"],
@@ -174,13 +174,13 @@ export const DEFAULT_DATA: PortfolioData = {
     {
       title: "Freelance Full Stack Developer",
       company: "Remote",
-      period: "Jan 2024 – Present",
+      period: "Jan 2024 â€“ Present",
       bullets: [
         "Delivered 5+ full-stack applications with full lifecycle ownership",
         "Improved application performance by up to 40% via optimization",
         "Built REST APIs and backend services using Node.js & Express",
         "Designed responsive, SEO-optimized UIs improving engagement",
-        "Managed end-to-end delivery: design → development → deployment",
+        "Managed end-to-end delivery: design â†’ development â†’ deployment",
       ],
     },
   ],
@@ -188,15 +188,15 @@ export const DEFAULT_DATA: PortfolioData = {
     {
       degree: "B.Sc. Computing & Bioinformatics Engineering",
       school: "Benha University",
-      period: "2024 – 2028 Expected",
+      period: "2024 â€“ 2028 Expected",
       gpa: "3.74 / 4.0",
     },
   ],
   certifications: [
-    { name: "Deep Learning Fundamentals", issuer: "NVIDIA Deep Learning Institute", icon: "🧠" },
-    { name: "Cybersecurity Bootcamp", issuer: "GDG & Benha University", icon: "🔐" },
-    { name: "Full Stack Open", issuer: "University of Helsinki", icon: "🌐" },
-    { name: "Best Member Award – Frontend Track", issuer: "GDG Benha National University", icon: "🏆" },
+    { name: "Deep Learning Fundamentals", issuer: "NVIDIA Deep Learning Institute", icon: "ðŸ§ " },
+    { name: "Cybersecurity Bootcamp", issuer: "GDG & Benha University", icon: "ðŸ”" },
+    { name: "Full Stack Open", issuer: "University of Helsinki", icon: "ðŸŒ" },
+    { name: "Best Member Award â€“ Frontend Track", issuer: "GDG Benha National University", icon: "ðŸ†" },
   ],
   messages: [
     { id: "1", name: "Ahmed Sayed", email: "ahmed@example.com", message: "Hi Mohamed, interested in hiring you for a project.", date: "2026-01-15", read: false },
@@ -204,7 +204,7 @@ export const DEFAULT_DATA: PortfolioData = {
   ],
 };
 
-// ─── Store Helpers (localStorage) ─────────────────────────────────────────────
+// â”€â”€â”€ Store Helpers (localStorage) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const KEY = "mn_portfolio_data";
 
 export function loadData(): PortfolioData {

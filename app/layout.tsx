@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Mohamed Nasser — Full Stack Engineer",
+  title: "Mohamed Nasser â€” Full Stack Engineer",
   description: "Full Stack Software Engineer specializing in React, Node.js, and bioinformatics platforms.",
 };
 

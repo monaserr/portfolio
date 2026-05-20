@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import { loadData, saveData, type PortfolioData } from "@/lib/store";
@@ -16,10 +16,10 @@ const ICON_MAP: Record<string, React.ReactNode> = {
   Cloud:    <Cloud size={15} />,
   Wrench:   <Wrench size={15} />,
   Brain:    <Brain size={15} />,
-  Dna:      <span className="text-sm leading-none">🧬</span>,
+  Dna:      <span className="text-sm leading-none">ðŸ§¬</span>,
 };
 
-/* ── Floating Pill Navbar ──────────────────────────────────────────────────── */
+/* â”€â”€ Floating Pill Navbar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 function NavBar({ name }: { name: string }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -35,7 +35,7 @@ function NavBar({ name }: { name: string }) {
 
   return (
     <>
-      {/* Desktop — floating pill */}
+      {/* Desktop â€” floating pill */}
       <div className="fixed top-5 left-1/2 -translate-x-1/2 z-50 hidden md:block w-full max-w-2xl px-4">
         <nav
           className="flex items-center justify-between px-5 py-3 rounded-full border transition-all duration-500"
@@ -124,7 +124,7 @@ function NavBar({ name }: { name: string }) {
   );
 }
 
-/* ── Hero ─────────────────────────────────────────────────────────────────── */
+/* â”€â”€ Hero â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 function Hero({ data }: { data: PortfolioData }) {
   const { personal } = data;
   const firstName = personal.name.split(" ")[0];
@@ -147,7 +147,7 @@ function Hero({ data }: { data: PortfolioData }) {
       <div className="max-w-6xl mx-auto px-6 w-full pt-28 pb-20">
         <div className="grid md:grid-cols-2 gap-16 items-center">
 
-          {/* LEFT — text */}
+          {/* LEFT â€” text */}
           <div>
             {/* Available badge */}
             <div
@@ -249,7 +249,7 @@ function Hero({ data }: { data: PortfolioData }) {
             </div>
           </div>
 
-          {/* RIGHT — photo */}
+          {/* RIGHT â€” photo */}
           <div className="flex justify-center md:justify-end">
             <div className="relative">
               {/* Decorative frame */}
@@ -319,7 +319,7 @@ function Hero({ data }: { data: PortfolioData }) {
   );
 }
 
-/* ── Section Header ───────────────────────────────────────────────────────── */
+/* â”€â”€ Section Header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 function SectionHead({ label, title }: { label: string; title: string }) {
   return (
     <div className="mb-12">
@@ -340,7 +340,7 @@ function SectionHead({ label, title }: { label: string; title: string }) {
   );
 }
 
-/* ── Skills ───────────────────────────────────────────────────────────────── */
+/* â”€â”€ Skills â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 function Skills({ data }: { data: PortfolioData }) {
   return (
     <section
@@ -398,7 +398,7 @@ function Skills({ data }: { data: PortfolioData }) {
   );
 }
 
-/* ── Projects ─────────────────────────────────────────────────────────────── */
+/* â”€â”€ Projects â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 function Projects({ data }: { data: PortfolioData }) {
   return (
     <section
@@ -435,7 +435,7 @@ function Projects({ data }: { data: PortfolioData }) {
                         fontFamily: "var(--font-mono)",
                       }}
                     >
-                      {p.status === "live" ? "● Live" : "◐ WIP"}
+                      {p.status === "live" ? "â— Live" : "â— WIP"}
                     </span>
                     <span className="text-xs" style={{ color: "#333", fontFamily: "var(--font-mono)" }}>{p.year}</span>
                   </div>
@@ -473,7 +473,7 @@ function Projects({ data }: { data: PortfolioData }) {
                     className="flex items-start gap-2 text-xs"
                     style={{ color: "#444" }}
                   >
-                    <span style={{ color: "#f0ede8", marginTop: "2px" }}>›</span>
+                    <span style={{ color: "#f0ede8", marginTop: "2px" }}>â€º</span>
                     {h}
                   </li>
                 ))}
@@ -503,7 +503,7 @@ function Projects({ data }: { data: PortfolioData }) {
   );
 }
 
-/* ── Experience ───────────────────────────────────────────────────────────── */
+/* â”€â”€ Experience â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 function Experience({ data }: { data: PortfolioData }) {
   return (
     <section
@@ -543,7 +543,7 @@ function Experience({ data }: { data: PortfolioData }) {
                 <ul className="space-y-2">
                   {exp.bullets.map((b, j) => (
                     <li key={j} className="flex items-start gap-2 text-sm" style={{ color: "#555" }}>
-                      <span style={{ color: "#f0ede8", marginTop: "2px", flexShrink: 0 }}>›</span>
+                      <span style={{ color: "#f0ede8", marginTop: "2px", flexShrink: 0 }}>â€º</span>
                       {b}
                     </li>
                   ))}
@@ -609,7 +609,7 @@ function Experience({ data }: { data: PortfolioData }) {
   );
 }
 
-/* ── Contact ──────────────────────────────────────────────────────────────── */
+/* â”€â”€ Contact â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 function Contact({ data }: { data: PortfolioData }) {
   const { personal } = data;
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -725,7 +725,7 @@ function Contact({ data }: { data: PortfolioData }) {
               className="w-full py-3 rounded-full font-semibold text-sm transition-all duration-200 hover:scale-[1.02]"
               style={{ background: "#f0ede8", color: "#080808" }}
             >
-              {sent ? "✓ Sent!" : "Send Message"}
+              {sent ? "âœ“ Sent!" : "Send Message"}
             </button>
           </form>
         </div>
@@ -734,7 +734,7 @@ function Contact({ data }: { data: PortfolioData }) {
   );
 }
 
-/* ── Main ─────────────────────────────────────────────────────────────────── */
+/* â”€â”€ Main â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 export default function Home() {
   const [data, setData] = useState<PortfolioData | null>(null);
 
@@ -765,7 +765,7 @@ export default function Home() {
         className="py-8 text-center text-xs"
         style={{ borderTop: "1px solid #111", color: "#333", fontFamily: "var(--font-mono)" }}
       >
-        {data.personal.name} · {new Date().getFullYear()}
+        {data.personal.name} Â· {new Date().getFullYear()}
       </footer>
     </main>
   );
