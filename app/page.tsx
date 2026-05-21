@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { loadData, saveData, type PortfolioData } from "@/lib/store";
+import { loadData, saveData, DEFAULT_DATA, type PortfolioData } from "@/lib/store";
 import { Github, Linkedin, Mail, Phone, MapPin, ExternalLink, ChevronDown, Star, Award, BookOpen, Menu, X, User, Zap, ArrowUpRight } from "lucide-react";
 
 function useReveal() {
@@ -333,7 +333,7 @@ function Contact({ data }: { data:PortfolioData }) {
 }
 
 export default function Home() {
-  const [data, setData] = useState<PortfolioData|null>(null);
+  const [data, setData] = useState<PortfolioData>(DEFAULT_DATA);
   useReveal();
   useEffect(() => {
     setData(loadData());
@@ -341,7 +341,6 @@ export default function Home() {
     window.addEventListener("portfolio-updated", h);
     return () => window.removeEventListener("portfolio-updated", h);
   }, []);
-  if (!data) return <div className="min-h-screen flex items-center justify-center text-xs text-muted" style={{ fontFamily:"var(--font-mono)" }}>Loading...</div>;
   return (
     <main>
       <NavBar name={data.personal.name}/>
