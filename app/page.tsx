@@ -4,7 +4,9 @@ import { loadData, saveData, type PortfolioData } from "@/lib/store";
 import { Github, Linkedin, Mail, Phone, MapPin, ExternalLink, ChevronDown, Star, Award, BookOpen, Menu, X, User, Zap, ArrowUpRight } from "lucide-react";
 
 function useReveal() {
+  // Add js-loaded class so CSS animations activate
   useEffect(() => {
+    document.body.classList.add("js-loaded");
     const els = document.querySelectorAll(".reveal");
     const io = new IntersectionObserver(
       entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); }),
